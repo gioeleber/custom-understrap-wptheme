@@ -1,0 +1,6 @@
+.post-thumbnail {
+  width: 100%;
+  @include media-breakpoint-up(md) {
+    width: 40%;
+  }
+}

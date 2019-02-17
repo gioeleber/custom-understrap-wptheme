@@ -1,0 +1,51 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
+// Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
+
+// Variables
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$blue-300: #64B5F6;
+$teal-300: #4DB6AC;
+
+
+// Theme color
+$primary  : $blue-300;
+$secondary: $teal-300;
+
+// Color map
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+);
+
+// Sizes map
+$sizes: (
+  110: 110%,
+);
+
+// transition
+$trns-duraton: 0.3s;
+
+// Element border Radius
+$border-radius:               .16rem !default;
+$border-radius-lg:            .16rem !default;
+$border-radius-sm:            .16rem !default;
+
+// navbar
+$navbar-dark-toggler-border-color:  transparent;
+$navbar-light-toggler-border-color: transparent;
+
+// footer
+$footer-color: $gray-300;
