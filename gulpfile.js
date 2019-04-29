@@ -16,6 +16,7 @@ var cleanCSS = require( 'gulp-clean-css' );
 var gulpSequence = require( 'gulp-sequence' );
 var replace = require( 'gulp-replace' );
 var autoprefixer = require( 'gulp-autoprefixer' );
+var sourcemaps = require('gulp-sourcemaps');
 
 // Configuration file to keep your code DRY
 var cfg = require( './gulpconfig.json' );
@@ -121,9 +122,9 @@ gulp.task( 'browser-sync', function() {
 } );
 
 // Run:
-// gulp watch-bs
+// gulp serve
 // Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
-gulp.task( 'watch-bs', ['browser-sync', 'watch', 'scripts'], function() {
+gulp.task( 'serve', ['browser-sync', 'watch', 'scripts'], function() {
 } );
 
 // Run:
@@ -144,14 +145,18 @@ gulp.task( 'scripts', function() {
         paths.dev + '/js/custom-javascript.js',
         ''
     ];
-  gulp.src( scripts )
-    .pipe( concat( 'theme.min.js' ) )
-    .pipe( uglify() )
-    .pipe( gulp.dest( paths.js ) );
+    gulp.src( scripts )
+      .pipe(sourcemaps.init())
+        .pipe( concat( 'theme.min.js' ) )
+        .pipe( uglify() )
+      .pipe(sourcemaps.write())
+      .pipe( gulp.dest( paths.js ) );
 
-  gulp.src( scripts )
-    .pipe( concat( 'theme.js' ) )
-    .pipe( gulp.dest( paths.js ) );
+    gulp.src( scripts )
+      .pipe(sourcemaps.init())
+        .pipe( concat( 'theme.js' ) )
+      .pipe(sourcemaps.write())
+      .pipe( gulp.dest( paths.js ) );
 });
 
 // Deleting any file inside the /src folder

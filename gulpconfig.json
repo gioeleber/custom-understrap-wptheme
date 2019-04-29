@@ -1,6 +1,6 @@
 {
   "browserSyncOptions" : {
-    "proxy": "http://web-app-wp/",
+    "proxy": "http://yoursite.com",
     "notify": false
   },
   "browserSyncWatchFiles" : [

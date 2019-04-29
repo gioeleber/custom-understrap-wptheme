@@ -76,8 +76,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 									the_title( '', '', false )
 								);
 								?>
-								<?php understrap_posted_on(); ?> 
-								<?php esc_html_e( 'in', 'understrap' ); ?> 
+								<?php understrap_posted_on(); ?>
+								<?php esc_html_e( 'in', 'understrap' ); ?>
 								<?php the_category( '&' ); ?>
 							</li>
 						<?php endwhile; ?>
