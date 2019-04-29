@@ -1,0 +1,29 @@
+
+//create a font-face
+@mixin font-face($name, $file, $weight: normal, $style: normal){
+  @font-face {
+    font-family: "#{$name}";
+    src: url('../fonts/#{$file}.woff2') format('woff2'),
+         url('../fonts/#{$file}.woff') format('woff'),
+         url('../fonts/#{$file}.ttf') format('truetype');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+// merriweather
+@include font-face(merriweather, merriweather-regular, 400, normal );
+@include font-face(merriweather, merriweather-italic,  400, italic );
+@include font-face(merriweather, merriweather-bold,    700, normal );
+
+// merriweather-sans
+@include font-face(merriweather-sans, merriweather-sans-regular, 400, normal );
+@include font-face(merriweather-sans, merriweather-sans-italic,  400, italic );
+@include font-face(merriweather-sans, merriweather-sans-bold,    700, normal );
+
+// Font
+$merriweather-font-stack: "merriweather", serif;
+$merriweather-sans-stack: "merriweather-sans", sans-serif;
+$font-family-base    : $merriweather-font-stack;
+
+// $headings-font-family:        inherit;
