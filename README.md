@@ -15,7 +15,7 @@ node -v
 if the output is something along the lines of:
 
 ```
-8.20.0
+10.x.x
 ```
 
 you should be good to go.
