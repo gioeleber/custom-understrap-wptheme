@@ -4,16 +4,6 @@ button:focus, html [type="button"]:focus, [type="reset"]:focus, [type="submit"]:
   outline: none;
 }
 
-// box shadow
-$box-shadow-sm: 0 .125rem .25rem rgba(0,0,0,.075);
-$box-shadow   : 0 .5rem   1rem   rgba(0,0,0,.15 );
-$box-shadow-lg: 0 1rem    3rem   rgba(0,0,0,.175);
-
-.shadow-sm { box-shadow: $box-shadow-sm; }
-.shadow { box-shadow: $box-shadow; }
-.shadow-lg { box-shadow: $box-shadow-lg; }
-.shadow-none { box-shadow: none; }
-
 // img Button
 
 .btn-img {
